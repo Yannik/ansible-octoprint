@@ -59,7 +59,7 @@
 - name: Clone Marlin firmware with my Configuration
   when: octoprint_flash
   register: marlincloned
-  git: repo={{octoprint_marlin_repo}} dest={{octoprint_marlin_folder}} version={{octoprint_marlin_repo_branch}}
+  git: repo={{octoprint_marlin_repo}} dest={{octoprint_marlin_folder}} version={{octoprint_marlin_repo_branch}} depth=1
 
 - name: Create convenient command to flash firmware
   when: octoprint_flash
